@@ -52,7 +52,8 @@ public class RoleDAO {
 		if (dto != null) {
 
 			if (dto.getName() != null && dto.getName().length() > 0) {
-				predicateList.add(builder.like(qRoot.get("name").as(String.class), "%" + dto.getName() + "%"));			}
+				predicateList.add(builder.like(qRoot.get("name"), dto.getName() + "%"));
+			}
 
 		}
 

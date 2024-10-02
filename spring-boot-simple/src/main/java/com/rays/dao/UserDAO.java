@@ -102,7 +102,8 @@ public class UserDAO {
 		if (dto != null) {
 
 			if (dto.getFirstName() != null && dto.getFirstName().length() > 0) {
-				predicateList.add(builder.like(qRoot.get("firstName").as(String.class), "%" + dto.getFirstName() + "%"));			}
+				predicateList.add(builder.like(qRoot.get("firstName"), dto.getFirstName() + "%"));
+			}
 
 			if (dto.getRoleId() != null && dto.getRoleId() > 0) {
 				predicateList.add(builder.equal(qRoot.get("roleId"), dto.getRoleId()));

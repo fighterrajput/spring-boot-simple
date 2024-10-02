@@ -100,6 +100,7 @@ public class UserDTO extends BaseDTO {
 		this.imageId = imageId;
 	}
 
+	@Override
 	public String getValue() {
 		return firstName;
 	}
